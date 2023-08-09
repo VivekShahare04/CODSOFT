@@ -1,0 +1,37 @@
+import java.util.*;
+public class NumGame{
+public static void main(String[] args){
+    System.out.println("random number:"); //random no. print
+    Scanner num = new Scanner(System.in);
+    int rd = num.nextInt();
+    int attempt=3;
+    int i =1;
+    
+    for(i=1;i<=attempt;i++)
+    {
+        
+    System.out.println("Guess the number from 1 to 100:\n");
+    int num1 = num.nextInt();
+   
+    
+    if(rd == num1){
+
+        System.out.println("Bella Chiao!");
+    }
+    else if(rd < num1){
+        System.out.println("U guessed BIG number!");
+    }
+    else {
+        System.out.println("U guessed SMALL number!");
+    }
+        }
+        if(i>=attempt){
+            System.out.println("Sorrrrry! You have used your all chances");
+        }
+    
+    
+    
+
+    
+}
+}
