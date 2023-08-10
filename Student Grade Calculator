@@ -1,0 +1,42 @@
+# CODSOFT
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter total no. of subject:");
+        int sub = input.nextInt();
+        int i ;
+        double totalmks = 0;
+        for(i=1; i<=sub; i++)
+        {
+        System.out.println("Marks in sub"+(i)+":");
+            double marks = input.nextDouble();
+            totalmks =totalmks + marks;
+        }
+        System.out.println("Total marks:"+totalmks);
+        
+        double Avgpercentage = totalmks/sub;
+        System.out.println("Average percentage:"+Avgpercentage);
+        
+        if(Avgpercentage > 90){
+            System.out.println("Your grade is A");
+        }
+        else if(Avgpercentage>80 && Avgpercentage<90){
+            System.out.println("Your grade is B");
+        }
+        else if(Avgpercentage>70 && Avgpercentage<80){
+            System.out.println("Your grade is C");
+        }
+        else if(Avgpercentage>60 && Avgpercentage<70){
+            System.out.println("Your grade is D");
+        }
+        else{
+            System.out.println("FAIL!");
+        }
+        
+         
+        
+        
+        
+    }
+}
