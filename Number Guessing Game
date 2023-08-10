@@ -17,6 +17,7 @@ public static void main(String[] args){
     if(rd == num1){
 
         System.out.println("Bella Chiao!");
+        break;
     }
     else if(rd < num1){
         System.out.println("U guessed BIG number!");
