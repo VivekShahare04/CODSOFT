@@ -1,0 +1,47 @@
+import java.util.*;
+public class ATM {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please! Enter your ATM card");
+        System.out.print("Current Balance:");
+        int balance = input.nextInt();
+
+        while(true){
+            System.out.println("1. Check Balance");
+            System.out.println("2. Withdraw");
+            System.out.println("3. Deposit");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice:");
+            int choice = 56000; //This will depend on users input either we can give or already its given Ex:-56000
+
+        switch(choice){
+            case 1 : System.out.println("Balance: " + balance);
+                     break;
+                 
+            case 2 : System.out.println("Enter the amount to withdraw:");
+                     double withdrawAmount = input.nextDouble();
+                     if(withdrawAmount < balance ){
+                        System.out.println("Withdraw Successful");
+                     }
+                     else{
+                        System.out.println("!!Insufficient funds!!");
+                     }
+                     break;
+                    
+            case 3 : System.out.println("Enter the amount to Deposit:" );
+                     double depositAmount = input.nextDouble();
+                     System.out.println("Deposit Successful");
+                     break;
+                     
+            case 4 : System.out.println("Exit from the Transaction");
+                     break;
+
+        }
+        
+
+
+    }
+    
+}
+
+}
