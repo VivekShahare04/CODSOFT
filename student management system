@@ -1,0 +1,77 @@
+ import java.util.*;
+ class Student {
+    String name;
+    int rollno;
+    double gpa;
+
+    public Student(String name,int rollno,double gpa){
+        this.name=name;
+        this.rollno=rollno;;
+        this.gpa=gpa;
+    }
+    public String getname(){
+        return name;
+    }
+    public int getrollno(){
+        return rollno;
+    }
+    public double getgpa(){
+        return gpa;
+    }
+}
+
+class studentmanagementsystem{
+    public ArrayList<Student> students = new ArrayList<>();
+    public void addstudent(Student student){
+        students.add(student);
+    }
+    public void displaystudent(){
+        for(Student student : students){
+            System.out.println(student);
+        }
+    }
+
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        studentmanagementsystem sms = new studentmanagementsystem();
+
+        while(true){
+
+            System.out.println("Student Management System--->");
+            System.out.println("1. Add student");
+            System.out.println("2. Display student");
+            System.out.println("3. Exit");
+            System.out.println("Enter your choice:");
+
+            int choice = input.nextInt();
+
+            switch(choice){
+                case 1:
+                System.out.println("Enter the name of the student:");
+                String name = input.next();
+                System.out.println("Enter the Roll no :");
+                int rollno = input.nextInt();
+                System.out.println("Enter the Student grade:");
+                double gpa = input.nextDouble();
+
+                Student student = new Student(name, rollno, gpa);
+                sms.addstudent(student);
+                break;
+
+                case 2:
+                sms.displaystudent();
+                break;
+                
+                case 3:
+                System.out.println("Exit from the system");
+                break;
+
+                default:
+                System.out.println("Invalid option,try again!!!!");
+            }
+        }
+    }
+}
+ 
+ 
